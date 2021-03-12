@@ -1,4 +1,6 @@
-def meshgrid(no_of_grids,no_of_boxes):
+import tensorflow as tf
+
+def meshgrid(no_of_grids=7,no_of_boxes=2):
   mesh_grid = tf.stack(tf.meshgrid(tf.range(no_of_grids),tf.range(no_of_grids)),axis=-1)
   mesh_grid = tf.reshape(mesh_grid,[1,
                                     no_of_grids,no_of_grids,
